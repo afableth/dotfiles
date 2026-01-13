@@ -1,0 +1,12 @@
+[window]
+opacity = 0.9
+decorations = "None"
+
+[cursor]
+# カーソルを点滅させる
+style = { blinking = "On" }
+# 点滅のインターバル
+blink_interval = 500
+# 点滅を停止するまでの秒数（0: 停止しない）
+blink_timeout = 0
+
