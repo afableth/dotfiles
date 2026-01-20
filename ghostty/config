@@ -1,0 +1,15 @@
+theme = GitLab Dark
+background-opacity = 0.65
+background-blur-radius = 20
+
+font-family = "HackGen Console NF"
+font-size = 15
+
+cursor-style = underline
+cursor-style-blink = false
+
+window-padding-x = 10
+window-padding-y = 10
+window-padding-balance = true
+
+mouse-hide-while-typing = true

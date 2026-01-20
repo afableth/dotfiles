@@ -1,5 +1,5 @@
 -- neovim settings
-vim.opt.clipboard = 'unnamedplus'
+vim.opt.clipboard:append({"unnamedplus"})
 vim.opt.title = true
 -- vim.opt.ambiwith = 'double' -- japanese letter
 vim.opt.smartindent = true
