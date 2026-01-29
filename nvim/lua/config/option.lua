@@ -21,6 +21,7 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 
 -- Dvorak
+--[[
 vim.api.nvim_set_keymap('n', 'd', 'h', { noremap = true })
 vim.api.nvim_set_keymap('n', 'h', 'j', { noremap = true })
 vim.api.nvim_set_keymap('n', 't', 'k', { noremap = true })
@@ -42,6 +43,8 @@ vim.api.nvim_set_keymap('v', 'ee', 'dd', { noremap = true })
 
 vim.api.nvim_set_keymap('v', 'r', 'n', { noremap = true })
 vim.api.nvim_set_keymap('v', 'R', 'N', { noremap = true })
+]]
+
 
 -- swap current and next
 vim.keymap.set('n', 'H', ':m .+1<CR>==', { noremap = true, silent = true })
