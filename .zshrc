@@ -1,5 +1,5 @@
-hutoload -Uz compinit
-compinit
+# hutoload -Uz compinit
+# compinit
 
 ## カラー設定
 export TERM=xterm-256color
@@ -44,4 +44,13 @@ zinit light-mode for \
     zdharma-continuum/zinit-annex-patch-dl \
     zdharma-continuum/zinit-annex-rust
 
-### End of Zinit's installer chunk
+function y() {
+    tmp="$(mktemp -t "yazi-cwd.XXXXX")"
+    yazi --cwd-file="$tmp"
+    if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+        cd -- "$cwd"
+    fi
+    rm -f -- "$tmp"
+}
+
+export EDITOR=nvim
