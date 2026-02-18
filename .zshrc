@@ -1,3 +1,5 @@
+# Add deno completions to search path
+if [[ ":$FPATH:" != *":/home/ubukha/.zsh/completions:"* ]]; then export FPATH="/home/ubukha/.zsh/completions:$FPATH"; fi
 # hutoload -Uz compinit
 # compinit
 
@@ -54,3 +56,11 @@ function y() {
 }
 
 export EDITOR=nvim
+
+# Created by `pipx` on 2026-02-01 05:40:41
+export PATH="$PATH:/home/ubukha/.local/bin"
+. "/home/ubukha/.deno/env"
+
+# opencode
+export PATH=/home/ubukha/.opencode/bin:$PATH
+export OLLAMA_API_BASE=http://192.168.150.155:11434

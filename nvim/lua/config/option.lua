@@ -47,8 +47,8 @@ vim.api.nvim_set_keymap('v', 'R', 'N', { noremap = true })
 
 
 -- swap current and next
-vim.keymap.set('n', 'H', ':m .+1<CR>==', { noremap = true, silent = true })
-vim.keymap.set('n', 'T', ':m .-2<CR>==', { noremap = true, silent = true })
+vim.keymap.set('n', 'J', ':m .+1<CR>==', { noremap = true, silent = true })
+vim.keymap.set('n', 'K', ':m .-2<CR>==', { noremap = true, silent = true })
 
-vim.keymap.set('v', 'J', ":move '>+1<CR>gv=gv", { noremap = true, silent = true })
-vim.keymap.set('v', 'K', ":move '<-2<CR>gv=gv", { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', '<C-j>', '<Plug>(skkeleton-enable)', { noremap = false, silent = true })
+vim.api.nvim_set_keymap('c', '<C-j>', '<Plug>(skkeleton-enable)', { noremap = false, silent = true })
