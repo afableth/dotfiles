@@ -64,3 +64,5 @@ export PATH="$PATH:/home/ubukha/.local/bin"
 # opencode
 export PATH=/home/ubukha/.opencode/bin:$PATH
 export OLLAMA_API_BASE=http://192.168.150.155:11434
+
+PS1='%F{green}%n%f:%F{blue}%~%f%# '
