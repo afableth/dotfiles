@@ -15,3 +15,6 @@ size = 12.5
 
 [font.normal]
 family = "HackGen Console NF"
+
+[terminal.shell]
+program = "zellij"

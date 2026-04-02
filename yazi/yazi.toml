@@ -1,7 +1,0 @@
-[mgr]
-show_hidden = true
-
-[[mgr.prepend_keymap]]
-on   = [ "c", "a", "a" ]
-run  = "plugin compress"
-desc = "Archive selected files"
