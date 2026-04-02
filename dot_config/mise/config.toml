@@ -1,2 +1,15 @@
+[settings]
+experimental = true
+disable_backends = ["asdf", "vfox"]
+
+[settings.pipx]
+uvx = true
+
 [tools]
 chezmoi = "latest"
+yazi = "latest"
+uv = "latest"
+neovim = "latest"
+ruff = "latest"
+
+
