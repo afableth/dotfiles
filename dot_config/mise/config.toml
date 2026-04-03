@@ -11,5 +11,8 @@ yazi = "latest"
 uv = "latest"
 neovim = "latest"
 ruff = "latest"
-
+"github:trasta298/keifu" = "latest"
+node = "latest"
+jq = "latest"
+rust-analyzer = "latest"
 
