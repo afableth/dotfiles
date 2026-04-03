@@ -15,4 +15,8 @@ ruff = "latest"
 node = "latest"
 jq = "latest"
 rust-analyzer = "latest"
+github-cli = "latest"
+opencode = "latest"
+rust = "latest"
+cargo = "latest"
 
