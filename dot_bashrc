@@ -41,3 +41,5 @@ export PATH="$HOME/.npm-global/bin:$PATH"
 eval "$(mise activate bash)"
 
 eval "$(/home/ubukha/.local/bin/mise activate bash)" # added by https://mise.run/bash
+
+alias pj="cd ~/Projects"
