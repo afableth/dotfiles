@@ -1,0 +1,11 @@
+[ui]
+# diff表示をカラフルに
+diff.format = "git"
+# エディタ設定
+editor = "code --wait"
+# ページャー
+pager = "less -FRX"
+
+[git]
+# push時に自動でブックマーク追跡
+auto-local-bookmark = true
