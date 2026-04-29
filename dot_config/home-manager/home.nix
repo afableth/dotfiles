@@ -20,7 +20,6 @@
   home.packages = [
     # TODO check "keifu"
     pkgs.chezmoi
-    pkgs.yazi
     pkgs.neovim
     pkgs.jq
     pkgs.github-cli
@@ -40,6 +39,19 @@
     #   echo "Hello, ${config.home.username}!"
     # '')
   ];
+
+  # settings doesn't work
+  programs.yazi = {
+    enable = true;
+    settings = {
+      yazi = {
+        sort_by = "natural";
+        sort_sensitive = true;
+        show_hidden = true;
+        show_symlink = true;
+      };
+    };
+  };
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
