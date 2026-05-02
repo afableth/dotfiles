@@ -47,9 +47,9 @@
   programs.zsh = {
     enable = true;
     autocd = true;
-    # enableAutosuggestions = true;
-    # enableCompletion = true;
-    # enableSyntaxHighlighting = true;
+    enableCompletion = true;
+    autosuggestion.enable = true;
+    syntaxHighlighting.enable = true;
     shellAliases = {
       ll = "ls -laF";
       gs = "git status";
