@@ -19,7 +19,6 @@
   # environment.
   home.packages = [
     # TODO check "keifu"
-    pkgs.chezmoi
     pkgs.neovim
     pkgs.jq
     pkgs.github-cli
@@ -41,7 +40,6 @@
     # '')
   ];
 
-  # settings doesn't work
   programs.yazi = {
     enable = true;
     settings = {
@@ -53,18 +51,36 @@
       };
     };
   };
+  programs.zsh = {
+    enable = true;
+    autocd = true;
+    enableAutosuggestions = true;
+    enableCompletion = true;
+    enableSyntaxHighlighting = true;
+    shellAliases = {
+      ll = "ls -laF";
+      gs = "git status";
+      cf = "cd ~/.config/home-manager/";
+      pj = "cd ~/Projects/";
+    };
+    history = {
+      extended = true;
+      ignoreDups = true;
+      save = 1000000;
+      share = true;
+      size = 1000000;
+    };
+  };
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
-    # ".screenrc".source = dotfiles/screenrc;
-    # ".config/alacritty/alacritty.toml" = dotfiles/alacritty.toml;
+    ".config/alacritty/alacritty.toml".source = dotfiles/alacritty.toml;
     ".config/opencode/opencode.jsonc".source = dotfiles/opencode.jsonc;
     ".config/nvim".source = dotfiles/nvim;
     ".config/hypr/hyprland.conf".source = dotfiles/hyprland.conf;
     ".config/ghostty/config".source = dotfiles/ghostty.toml;
 
-    # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
     #   org.gradle.console=verbose
     #   org.gradle.daemon.idletimeout=3600000
@@ -88,7 +104,7 @@
   #  /etc/profiles/per-user/ubukha/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
-    # EDITOR = "emacs";
+    EDITOR = "nvim";
   };
 
   # Let Home Manager install and manage itself.
