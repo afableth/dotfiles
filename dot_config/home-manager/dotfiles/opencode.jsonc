@@ -1,0 +1,27 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "provider": {
+    "ollama": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Ollama (local)",
+      "options": {
+        "baseURL": "http://tailscale-ollama.tail687134.ts.net:11434/v1"
+      },
+      "models": {
+        "qwen3.5:9b": {
+          "name": "qwen3.5:9b"
+        },
+        "qwen3.6:27b": {
+          "name": "qwen3.6:27b"
+        }
+      }
+    }
+  },
+  "mcp": {
+    "microsoft-docs": {
+      "type": "remote",
+      "url": "https://learn.microsoft.com/api/mcp",
+      "enabled": true
+    }
+  }
+}
