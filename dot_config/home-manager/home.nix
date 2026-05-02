@@ -25,6 +25,7 @@
     pkgs.github-cli
     pkgs.opencode
     pkgs.fastfetch
+    pkgs.uv
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
@@ -60,6 +61,8 @@
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
     # # symlink to the Nix store copy.
     # ".screenrc".source = dotfiles/screenrc;
+    ".config/alacritty/alacritty.toml" = dotfiles/alacritty.toml;
+#     ".config/opencode/opencode.jsonc" = dotfiles/opencode.jsonc;
 
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
