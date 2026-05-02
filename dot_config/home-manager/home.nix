@@ -62,7 +62,9 @@
     # # symlink to the Nix store copy.
     # ".screenrc".source = dotfiles/screenrc;
     # ".config/alacritty/alacritty.toml" = dotfiles/alacritty.toml;
-#     ".config/opencode/opencode.jsonc" = dotfiles/opencode.jsonc;
+    ".config/opencode/opencode.jsonc".source = dotfiles/opencode.jsonc;
+    ".config/nvim".source = dotfiles/nvim;
+    ".config/hypr/hyprland.conf".source = dotfiles/hyprland.conf
 
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
