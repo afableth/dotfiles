@@ -45,7 +45,7 @@
   programs.yazi = {
     enable = true;
     settings = {
-      yazi = {
+      mgr = {
         sort_by = "natural";
         sort_sensitive = true;
         show_hidden = true;
@@ -61,7 +61,7 @@
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
     # # symlink to the Nix store copy.
     # ".screenrc".source = dotfiles/screenrc;
-    ".config/alacritty/alacritty.toml" = dotfiles/alacritty.toml;
+    # ".config/alacritty/alacritty.toml" = dotfiles/alacritty.toml;
 #     ".config/opencode/opencode.jsonc" = dotfiles/opencode.jsonc;
 
     # # You can also set the file content immediately.
