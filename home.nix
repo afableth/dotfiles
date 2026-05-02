@@ -1,22 +1,14 @@
 { config, pkgs, ... }:
 
 {
-  # Home Manager needs a bit of information about you and the paths it should
-  # manage.
   home.username = "ubukha";
   home.homeDirectory = "/var/home/ubukha";
 
-  # This value determines the Home Manager release that your configuration is
-  # compatible with. This helps avoid breakage when a new Home Manager release
-  # introduces backwards incompatible changes.
-  #
-  # You should not change this value, even if you update Home Manager. If you do
-  # want to update the value, then make sure to first check the Home Manager
-  # release notes.
-  home.stateVersion = "25.11"; # Please read the comment before changing.
+  # If you do want to update the value, then make sure to first check the
+  # Home Manager release notes.
+  home.stateVersion = "25.11";
 
-  # The home.packages option allows you to install Nix packages into your
-  # environment.
+  # The home.packages option allows you to install Nix packages.
   home.packages = [
     # TODO check "keifu"
     pkgs.neovim
@@ -25,6 +17,7 @@
     pkgs.opencode
     pkgs.fastfetch
     pkgs.uv
+    pkgs.zellij
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
@@ -54,9 +47,9 @@
   programs.zsh = {
     enable = true;
     autocd = true;
-    enableAutosuggestions = true;
-    enableCompletion = true;
-    enableSyntaxHighlighting = true;
+    # enableAutosuggestions = true;
+    # enableCompletion = true;
+    # enableSyntaxHighlighting = true;
     shellAliases = {
       ll = "ls -laF";
       gs = "git status";
@@ -73,18 +66,12 @@
   };
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
-  # plain files is through 'home.file'.
   home.file = {
     ".config/alacritty/alacritty.toml".source = dotfiles/alacritty.toml;
     ".config/opencode/opencode.jsonc".source = dotfiles/opencode.jsonc;
     ".config/nvim".source = dotfiles/nvim;
     ".config/hypr/hyprland.conf".source = dotfiles/hyprland.conf;
     ".config/ghostty/config".source = dotfiles/ghostty.toml;
-
-    # ".gradle/gradle.properties".text = ''
-    #   org.gradle.console=verbose
-    #   org.gradle.daemon.idletimeout=3600000
-    # '';
   };
 
   # Home Manager can also manage your environment variables through
