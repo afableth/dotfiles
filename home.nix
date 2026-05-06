@@ -44,6 +44,7 @@
       };
     };
   };
+
   programs.zsh = {
     enable = true;
     autocd = true;
@@ -65,11 +66,17 @@
     };
   };
 
+  programs.nixvim = {
+    enable = true;
+    colorschemes.catppuccin.enable = true;
+    plugins.lualine.enable = true;
+  };
+
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   home.file = {
     ".config/alacritty/alacritty.toml".source = dotfiles/alacritty.toml;
     ".config/opencode/opencode.jsonc".source = dotfiles/opencode.jsonc;
-    ".config/nvim".source = dotfiles/nvim;
+    # ".config/nvim".source = dotfiles/nvim;
     ".config/hypr/hyprland.conf".source = dotfiles/hyprland.conf;
     ".config/ghostty/config".source = dotfiles/ghostty.toml;
   };
