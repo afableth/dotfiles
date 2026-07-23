@@ -114,10 +114,11 @@
     isNormalUser = true;
     description = "poske";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-    #  thunderbird
-    ];
   };
+
+  fonts.packages = with pkgs; [
+    font-awesome_4
+  ];
 
   # Install firefox.
   programs.firefox.enable = true;
