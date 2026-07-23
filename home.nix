@@ -12,9 +12,10 @@
   home.packages = with pkgs;[
     # TODO check "keifu"
     fastfetch
-    git
     neovim
     home-manager
+    nil
+    discord
   ];
 
   programs = {
