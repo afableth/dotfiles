@@ -33,7 +33,6 @@
             home-manager.users.poske = {
               imports = [
                 ./home.nix
-                nixvim.homeModules.nixvim
               ];
             };
           }
