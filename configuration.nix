@@ -63,26 +63,7 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
-  # Enable the GNOME Desktop Environment.
   services.displayManager.gdm.enable = true;
-  services.desktopManager.gnome.enable = true;
-
-  environment.gnome.excludePackages = (with pkgs; [
-    gnome-tour
-    gnome-maps
-    gnome-music
-    gnome-contacts
-    gnome-weather
-    gnome-clocks
-    gnome-characters
-    gnome-logs
-    gnome-calendar
-    gnome-console
-    gnome-connections
-    gnome-text-editor
-    epiphany # Browser
-    yelp
-  ]);
 
   # Configure keymap in X11
   services.xserver.xkb = {
