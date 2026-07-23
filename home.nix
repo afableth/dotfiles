@@ -12,9 +12,6 @@
   home.packages = [
     # TODO check "keifu"
     pkgs.neovim
-    pkgs.jq
-    pkgs.github-cli
-    pkgs.opencode
     pkgs.fastfetch
     pkgs.uv
     pkgs.zellij
