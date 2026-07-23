@@ -46,7 +46,23 @@
         user.email = "poske+github@ubukha.com";
       };
     };
+    alacritty.enable = true;
+    fuzzel.enable = true;
+    waybar.enable = true;
+    swaylock.enable = true;
+    firefox = {
+      enable = true;
+      languagePacks = [ "en-US" "ja-JP" ];
+      profiles.default.search = {
+        force = true;
+        default = "ddg";
+        privateDefault  = "ddg";
+      };
+    };
   };
+  services.mako.enable = true;
+  services.swayidle.enable = true; # idle management daemon
+  services.polkit-gnome.enable = true; # polkit
 
   home.sessionVariables = {
     EDITOR = "nvim";
