@@ -1,8 +1,8 @@
 { config, pkgs, ... }:
 
 {
-  home.username = "ubukha";
-  home.homeDirectory = "/var/home/ubukha";
+  home.username = "poske";
+  home.homeDirectory = "/home/poske";
 
   # If you do want to update the value, then make sure to first check the
   # Home Manager release notes.
