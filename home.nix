@@ -14,7 +14,6 @@
     fastfetch
     git
     neovim
-    zed-editor
   ];
 
   programs.zsh = {
@@ -26,7 +25,6 @@
     shellAliases = {
       ll = "ls -laF";
       gs = "git status";
-      cf = "cd ~/.config/home-manager/";
       pj = "cd ~/Projects/";
     };
     history = {
