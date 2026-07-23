@@ -38,6 +38,13 @@
         size = 1000000;
       };
     };
+    git = {
+      enable = true;
+      extraConfig = {
+        user.name = "poske57";
+        user.email = "poske+github@ubukha.com";
+      };
+    };
   };
 
   home.sessionVariables = {
