@@ -13,6 +13,8 @@
     # TODO check "keifu"
     fastfetch
     git
+    neovim
+    zed-editor
   ];
 
   programs.zsh = {
