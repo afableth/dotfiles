@@ -1,5 +1,5 @@
 {
-  description = "Home Manager configuration of ubukha";
+  description = "Home Manager configuration of poske";
 
   inputs = {
     # Specify the source of Home Manager and Nixpkgs.
