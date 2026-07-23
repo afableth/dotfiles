@@ -15,6 +15,19 @@
     memoryPercent = 300;
   };
 
+  # Compositor
+  programs.niri.enable = true;
+  services.greetd = {
+    enable = true;
+    settings = {
+      default_session = {
+        command = "${config.programs.niri.package}/bin/niri-session";
+        user = "poske";
+      };
+    };
+  };
+  systemd.user.services.niri.enableDefaultPath = false;
+
   nix = {
     settings = {
       experimental-features = [ "nix-command" "flakes" ];
