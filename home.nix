@@ -73,6 +73,7 @@
   home.file = {
     ".config/zed/AGENTS.md".source = ./dotfiles/agent/AGENTS.md;
     ".config/zed/settings.json".source = ./dotfiles/zed.jsonc;
+    ".config/niri/config.kdl".source = ./dotfiles/niri/config.kdl;
   };
 
   # Let Home Manager install and manage itself.
