@@ -14,30 +14,38 @@
     fastfetch
     git
     neovim
+    home-manager
   ];
 
-  programs.zsh = {
-    enable = true;
-    autocd = true;
-    enableCompletion = true;
-    autosuggestion.enable = true;
-    syntaxHighlighting.enable = true;
-    shellAliases = {
-      ll = "ls -laF";
-      gs = "git status";
-      pj = "cd ~/Projects/";
-    };
-    history = {
-      extended = true;
-      ignoreDups = true;
-      save = 1000000;
-      share = true;
-      size = 1000000;
+  programs = {
+    zsh = {
+      enable = true;
+      autocd = true;
+      enableCompletion = true;
+      autosuggestion.enable = true;
+      syntaxHighlighting.enable = true;
+      shellAliases = {
+        ll = "ls -laF";
+        gs = "git status";
+        pj = "cd ~/Projects/";
+      };
+      history = {
+        extended = true;
+        ignoreDups = true;
+        save = 1000000;
+        share = true;
+        size = 1000000;
+      };
     };
   };
 
   home.sessionVariables = {
     EDITOR = "nvim";
+  };
+
+  home.file = {
+    ".config/zed/AGENTS.md".source = ./dotfiles/agent/AGENTS.md;
+    ".config/zed/settings.json".source = ./dotfiles/zed.jsonc;
   };
 
   # Let Home Manager install and manage itself.
