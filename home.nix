@@ -53,6 +53,7 @@
     firefox = {
       enable = true;
       languagePacks = [ "en-US" "ja-JP" ];
+      configPath = "${config.xdg.configHome}/mozilla/firefox";
       profiles.default.search = {
         force = true;
         default = "ddg";
