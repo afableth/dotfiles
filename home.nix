@@ -28,6 +28,7 @@
         ll = "ls -laF";
         gs = "git status";
         pj = "cd ~/Projects/";
+        grep = "grep --color=auto";
       };
       history = {
         extended = true;
