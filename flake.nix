@@ -30,20 +30,14 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.poske = import ./home.nix;
+            home-manager.users.poske = {
+              imports = [
+                ./home.nix
+                nixvim.homeModules.nixvim
+              ];
+            };
           }
         ];
-      };
-
-        # Specify your home configuration modules here, for example,
-        # the path to your home.nix.
-        modules = [
-          ./home.nix
-          nixvim.homeModules.nixvim
-        ];
-
-        # Optionally use extraSpecialArgs
-        # to pass through arguments to home.nix
       };
     };
 }
