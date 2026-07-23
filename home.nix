@@ -16,6 +16,7 @@
     home-manager
     nil
     discord
+    localsend
   ];
 
   programs = {
