@@ -19,13 +19,8 @@
   # environment.
   home.packages = [
     # TODO check "keifu"
-    pkgs.chezmoi
     pkgs.neovim
-    pkgs.jq
-    pkgs.github-cli
-    pkgs.opencode
     pkgs.fastfetch
-    pkgs.uv
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
