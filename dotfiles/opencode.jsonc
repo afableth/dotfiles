@@ -1,18 +1,21 @@
 {
   "$schema": "https://opencode.ai/config.json",
+  "permission": {
+    "bash": "ask"
+  },
   "provider": {
-    "ollama": {
+    "llamacpp": {
       "npm": "@ai-sdk/openai-compatible",
-      "name": "Ollama (local)",
+      "name": "llamacpp",
       "options": {
-        "baseURL": "http://tailscale-ollama.tail687134.ts.net:11434/v1"
+        "baseURL": "http://aipc.tail687134.ts.net:8080/v1"
       },
       "models": {
-        "qwen3.5:9b": {
-          "name": "qwen3.5:9b"
+        "qwen3.5-deepseekv4": {
+          "name": "qwen3.5-deepseekv4"
         },
-        "qwen3.6:27b": {
-          "name": "qwen3.6:27b"
+        "qwen3.6": {
+          "name": "qwen3.6"
         }
       }
     }
