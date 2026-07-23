@@ -41,7 +41,7 @@
     };
     git = {
       enable = true;
-      extraConfig = {
+      settings = {
         user.name = "poske57";
         user.email = "poske+github@ubukha.com";
       };
