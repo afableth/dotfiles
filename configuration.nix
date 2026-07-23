@@ -135,6 +135,8 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     zsh
+    gnomeExtensions.astra-monitor
+    gnomeExtensions.blur-my-shell
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
