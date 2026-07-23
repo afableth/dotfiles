@@ -49,13 +49,8 @@
     };
     alacritty.enable = true;
     fuzzel.enable = true;
-    waybar = {
+    noctalia = {
       enable = true;
-      settings = {
-        main = {
-          modules-right = [ "clock" ];
-        };
-      };
     };
     swaylock.enable = true;
     firefox = {
