@@ -55,6 +55,22 @@
   # Enable the GNOME Desktop Environment.
   services.displayManager.gdm.enable = true;
   services.desktopManager.gnome.enable = true;
+  services.xserver.desktopManager.xterm.enable = false;
+
+  environment.gnome.excludePackages = (with pkgs; [
+    gnome-tour
+    gnome-maps
+    gnome-music
+    gnome-contacts
+    gnome-weather
+    gnome-clocks
+    gnome-characters
+    gnome-logs
+    gnome-calendar
+    gnome-console
+    epiphany # Browser
+    yelp
+  ]);
 
   # Configure keymap in X11
   services.xserver.xkb = {
