@@ -15,7 +15,9 @@
     neovim
     home-manager
     nil
-    discord
+    localsend
+    alacritty
+    spotifyd
   ];
 
   programs = {
@@ -41,9 +43,35 @@
     };
     git = {
       enable = true;
-      extraConfig = {
+      settings = {
         user.name = "poske57";
         user.email = "poske+github@ubukha.com";
+      };
+    };
+    noctalia = {
+      enable = true;
+    };
+    firefox = {
+      enable = true;
+      languagePacks = [ "en-US" "ja-JP" ];
+      configPath = "${config.xdg.configHome}/mozilla/firefox";
+      profiles.default.search = {
+        force = true;
+        default = "ddg";
+        privateDefault  = "ddg";
+      };
+    };
+  };
+
+  services = {
+    mako.enable = true;
+    swayidle.enable = true; # idle management daemon
+    polkit-gnome.enable = true; # polkit
+    spotifyd = {
+      enable = true;
+      settings.global = {
+        device_name = "NixOS";
+        bitrate = 150;
       };
     };
   };
@@ -55,30 +83,7 @@
   home.file = {
     ".config/zed/AGENTS.md".source = ./dotfiles/agent/AGENTS.md;
     ".config/zed/settings.json".source = ./dotfiles/zed.jsonc;
-  };
-
-  dconf.settings = {
-    "org/gnome/shell" = {
-      # お気に入りのアプリ
-      favorite-apps = [
-        "firefox.desktop"
-        "dev.zed.Zed.desktop"
-      ];
-      # 拡張機能の有効化 (導入ではなく最初から有効状態で開始するための設定)
-      # 拡張機能自体のインストール方法は通常のパッケージのインストール方法と同じなので割愛
-      enabled-extensions = [
-
-      ];
-    };
-    "org/gnome/desktop/interface" = {
-      enable-animations = true;
-      clock-show-weekday = true;
-      text-scaling-factor = 1;
-    };
-    # 最大化ボタンや最小化ボタンを表示
-    "org/gnome/desktop/wm/preferences" = {
-      button-layout = ":minimize,maximize,close";
-    };
+    ".config/niri/config.kdl".source = ./dotfiles/niri/config.kdl;
   };
 
   # Let Home Manager install and manage itself.

@@ -2,17 +2,40 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, noctalia-greeter, ... }:
 
 {
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      noctalia-greeter.nixosModules.default
     ];
 
   zramSwap = {
     enable = true;
     memoryPercent = 300;
+  };
+
+  # Compositor
+  programs.niri.enable = true;
+  systemd.user.services.niri.enableDefaultPath = false;
+
+  # Greeter
+  programs.noctalia-greeter = {
+    enable = true;
+
+    # Optional configuration
+    greeter-args = "";
+    settings = {
+      cursor = {
+        theme = "Bibata-Modern-Ice";
+        size = 24;
+        path = "${pkgs.bibata-cursors}/share/icons";
+      };
+      keyboard = {
+        layout = "us";
+      };
+    };
   };
 
   nix = {
@@ -60,35 +83,12 @@
     LC_TIME = "en_US.UTF-8";
   };
 
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
-
-  # Enable the GNOME Desktop Environment.
-  services.displayManager.gdm.enable = true;
-  services.desktopManager.gnome.enable = true;
-
-  environment.gnome.excludePackages = (with pkgs; [
-    gnome-tour
-    gnome-maps
-    gnome-music
-    gnome-contacts
-    gnome-weather
-    gnome-clocks
-    gnome-characters
-    gnome-logs
-    gnome-calendar
-    gnome-console
-    gnome-connections
-    gnome-text-editor
-    epiphany # Browser
-    yelp
-  ]);
-
-  # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "";
-  };
+  # X11 is disabled — using Wayland (niri) only.
+  # services.xserver.enable = true;
+  # services.xserver.xkb = {
+  #   layout = "us";
+  #   variant = "";
+  # };
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
@@ -120,13 +120,12 @@
     isNormalUser = true;
     description = "poske";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-    #  thunderbird
-    ];
   };
 
-  # Install firefox.
-  programs.firefox.enable = true;
+  fonts.packages = with pkgs; [
+    font-awesome_4
+  ];
+
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -135,8 +134,6 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     zsh
-    gnomeExtensions.astra-monitor
-    gnomeExtensions.blur-my-shell
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
