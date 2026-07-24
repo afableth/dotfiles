@@ -2,12 +2,13 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, noctalia-greeter, ... }:
 
 {
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      noctalia-greeter.nixosModules.default
     ];
 
   zramSwap = {
@@ -17,16 +18,25 @@
 
   # Compositor
   programs.niri.enable = true;
-  services.greetd = {
+  systemd.user.services.niri.enableDefaultPath = false;
+
+  # Greeter
+  programs.noctalia-greeter = {
     enable = true;
+
+    # Optional configuration
+    greeter-args = "";
     settings = {
-      default_session = {
-        command = "${config.programs.niri.package}/bin/niri-session";
-        user = "poske";
+      cursor = {
+        theme = "Bibata-Modern-Ice";
+        size = 24;
+        path = "${pkgs.bibata-cursors}/share/icons";
+      };
+      keyboard = {
+        layout = "us";
       };
     };
   };
-  systemd.user.services.niri.enableDefaultPath = false;
 
   nix = {
     settings = {
