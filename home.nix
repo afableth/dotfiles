@@ -51,7 +51,6 @@
     noctalia = {
       enable = true;
     };
-    swaylock.enable = true;
     firefox = {
       enable = true;
       languagePacks = [ "en-US" "ja-JP" ];
