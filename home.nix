@@ -17,6 +17,7 @@
     nil
     discord
     localsend
+    alacritty
   ];
 
   programs = {
@@ -47,8 +48,6 @@
         user.email = "poske+github@ubukha.com";
       };
     };
-    alacritty.enable = true;
-    fuzzel.enable = true;
     noctalia = {
       enable = true;
     };
