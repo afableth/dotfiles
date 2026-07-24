@@ -17,6 +17,7 @@
     nil
     localsend
     alacritty
+    spotifyd
   ];
 
   programs = {
@@ -61,9 +62,19 @@
       };
     };
   };
-  services.mako.enable = true;
-  services.swayidle.enable = true; # idle management daemon
-  services.polkit-gnome.enable = true; # polkit
+
+  services = {
+    mako.enable = true;
+    swayidle.enable = true; # idle management daemon
+    polkit-gnome.enable = true; # polkit
+    spotifyd = {
+      enable = true;
+      settings.global = {
+        device_name = "NixOS";
+        bitrate = 150;
+      };
+    };
+  };
 
   home.sessionVariables = {
     EDITOR = "nvim";
