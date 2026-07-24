@@ -15,7 +15,6 @@
     neovim
     home-manager
     nil
-    discord
     localsend
     alacritty
   ];
