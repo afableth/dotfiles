@@ -16,7 +16,6 @@
     home-manager
     nil
     localsend
-    alacritty
     spotifyd
   ];
 
@@ -59,6 +58,20 @@
         force = true;
         default = "ddg";
         privateDefault  = "ddg";
+      };
+    };
+    alacritty = {
+      enable = true;
+      settings = {
+        window = {
+          decorations = "none";
+          blur = true;
+          opacity = 0.4;
+          padding = {
+            x = 4;
+            y = 4;
+          };
+        };
       };
     };
   };
