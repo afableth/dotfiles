@@ -17,6 +17,7 @@
     nil
     localsend
     spotifyd
+    zed-editor
   ];
 
   programs = {
