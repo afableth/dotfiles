@@ -28,7 +28,7 @@
       autosuggestion.enable = true;
       syntaxHighlighting.enable = true;
       shellAliases = {
-        ll = "ls -laF";
+        ll = "ls -lAF";
         gs = "git status";
         pj = "cd ~/Projects/";
         grep = "grep --color=auto";
