@@ -15,9 +15,11 @@
     neovim
     home-manager
     nil
+    nixd
     localsend
     spotifyd
     zed-editor
+    opencode
   ];
 
   programs = {
