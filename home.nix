@@ -19,7 +19,6 @@
     localsend
     spotifyd
     zed-editor
-    opencode
   ];
 
   programs = {
@@ -75,6 +74,14 @@
             y = 4;
           };
         };
+      };
+    };
+    opencode = {
+      enable = true;
+      settings = {
+      };
+      tui = {
+        theme = "system";
       };
     };
   };
