@@ -38,6 +38,13 @@
     };
   };
 
+  # IME
+  i18n.inputMethod = {
+    enable = true;
+    type = "fcitx5";
+    fcitx5.addons = with pkgs; [ fcitx5-mozc fcitx5-anthy ];
+  };
+
   nix = {
     settings = {
       experimental-features = [ "nix-command" "flakes" ];
