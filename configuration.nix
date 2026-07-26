@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, noctalia-greeter, ... }:
+{ _config, pkgs, noctalia-greeter, ... }:
 
 {
   imports =
@@ -36,6 +36,13 @@
         layout = "us";
       };
     };
+  };
+
+  # IME
+  i18n.inputMethod = {
+    enable = true;
+    type = "fcitx5";
+    fcitx5.addons = with pkgs; [ fcitx5-mozc fcitx5-anthy ];
   };
 
   nix = {

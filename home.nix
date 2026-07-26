@@ -15,9 +15,10 @@
     neovim
     home-manager
     nil
+    nixd
     localsend
-    alacritty
     spotifyd
+    zed-editor
   ];
 
   programs = {
@@ -28,7 +29,7 @@
       autosuggestion.enable = true;
       syntaxHighlighting.enable = true;
       shellAliases = {
-        ll = "ls -laF";
+        ll = "ls -lAF";
         gs = "git status";
         pj = "cd ~/Projects/";
         grep = "grep --color=auto";
@@ -59,6 +60,28 @@
         force = true;
         default = "ddg";
         privateDefault  = "ddg";
+      };
+    };
+    alacritty = {
+      enable = true;
+      settings = {
+        window = {
+          decorations = "none";
+          blur = true;
+          opacity = 0.4;
+          padding = {
+            x = 4;
+            y = 4;
+          };
+        };
+      };
+    };
+    opencode = {
+      enable = true;
+      settings = {
+      };
+      tui = {
+        theme = "system";
       };
     };
   };
