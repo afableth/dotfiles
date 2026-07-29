@@ -107,6 +107,7 @@
     ".config/zed/AGENTS.md".source = ./dotfiles/agent/AGENTS.md;
     ".config/zed/settings.json".source = ./dotfiles/zed.jsonc;
     ".config/niri/config.kdl".source = ./dotfiles/niri/config.kdl;
+    ".config/nvim/init.lua".source = ./dotfiles/nvim/init.lua;
   };
 
   # Let Home Manager install and manage itself.
