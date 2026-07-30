@@ -63,12 +63,9 @@
       enable = true;
       settings = {
         window = {
-          decorations = "none";
-          blur = true;
-          opacity = 0.4;
           padding = {
-            x = 4;
-            y = 4;
+            x = 2;
+            y = 2;
           };
         };
       };
@@ -80,6 +77,9 @@
       tui = {
         theme = "system";
       };
+    };
+    wofi = {
+      enable = true;
     };
   };
 
@@ -104,6 +104,7 @@
     ".config/zed/AGENTS.md".source = ./dotfiles/agent/AGENTS.md;
     ".config/zed/settings.json".source = ./dotfiles/zed.jsonc;
     ".config/nvim/init.lua".source = ./dotfiles/nvim/init.lua;
+    ".config/labwc/rc.xml".source = ./dotfiles/labwc/rc.xml;
   };
 
   # Let Home Manager install and manage itself.
