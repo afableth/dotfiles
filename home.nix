@@ -19,6 +19,7 @@
     localsend
     spotifyd
     zed-editor
+    steam
   ];
 
   programs = {
@@ -105,6 +106,7 @@
     ".config/zed/settings.json".source = ./dotfiles/zed.jsonc;
     ".config/nvim/init.lua".source = ./dotfiles/nvim/init.lua;
     ".config/labwc/rc.xml".source = ./dotfiles/labwc/rc.xml;
+    ".config/labwc/autostart".source = ./dotfiles/autostart;
   };
 
   # Let Home Manager install and manage itself.

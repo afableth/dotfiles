@@ -3,7 +3,7 @@
   <keyboard>
     <default />
     <!-- The W- prefix refers to the Super key -->
-    <keybind key="W">
+    <keybind key="W-z">
       <action name="Execute" command="wofi --show drun" />
     </keybind>
   </keyboard>
