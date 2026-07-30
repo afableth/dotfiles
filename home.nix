@@ -49,9 +49,6 @@
         user.email = "poske+github@ubukha.com";
       };
     };
-    noctalia = {
-      enable = true;
-    };
     firefox = {
       enable = true;
       languagePacks = [ "en-US" "ja-JP" ];
@@ -106,7 +103,6 @@
   home.file = {
     ".config/zed/AGENTS.md".source = ./dotfiles/agent/AGENTS.md;
     ".config/zed/settings.json".source = ./dotfiles/zed.jsonc;
-    ".config/niri/config.kdl".source = ./dotfiles/niri/config.kdl;
     ".config/nvim/init.lua".source = ./dotfiles/nvim/init.lua;
   };
 

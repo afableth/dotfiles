@@ -2,13 +2,12 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ _config, pkgs, noctalia-greeter, ... }:
+{ _config, pkgs, ... }:
 
 {
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      noctalia-greeter.nixosModules.default
     ];
 
   zramSwap = {
@@ -17,23 +16,15 @@
   };
 
   # Compositor
-  programs.niri.enable = true;
-  systemd.user.services.niri.enableDefaultPath = false;
+  programs.labwc.enable = true;
 
   # Greeter
-  programs.noctalia-greeter = {
+  services.greetd = {
     enable = true;
-
-    # Optional configuration
-    greeter-args = "";
+    useTextGreeter = true;
     settings = {
-      cursor = {
-        theme = "Bibata-Modern-Ice";
-        size = 24;
-        path = "${pkgs.bibata-cursors}/share/icons";
-      };
-      keyboard = {
-        layout = "us";
+      default_session = {
+        command = "${pkgs.tuigreet}/bin/tuigreet -t -r --remember-session --asterisks --cmd ${pkgs.labwc}/bin/labwc";
       };
     };
   };
@@ -90,7 +81,7 @@
     LC_TIME = "en_US.UTF-8";
   };
 
-  # X11 is disabled — using Wayland (niri) only.
+  # X11 is disabled — using Wayland only.
   # services.xserver.enable = true;
   # services.xserver.xkb = {
   #   layout = "us";
