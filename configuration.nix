@@ -15,6 +15,12 @@
     memoryPercent = 300;
   };
 
+  # OpenGL (required for Steam)
+  hardware.opengl = {
+    enable = true;
+    driSupport32Bit = true;
+  };
+
   # Compositor
   programs.labwc.enable = true;
 
@@ -81,12 +87,11 @@
     LC_TIME = "en_US.UTF-8";
   };
 
-  # X11 is disabled — using Wayland only.
-  # services.xserver.enable = true;
-  # services.xserver.xkb = {
-  #   layout = "us";
-  #   variant = "";
-  # };
+  services.xserver.enable = true;
+  services.xserver.xkb = {
+    layout = "us";
+    variant = "";
+  };
 
   # Enable CUPS to print documents.
   services.printing.enable = true;

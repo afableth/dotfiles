@@ -99,6 +99,8 @@
 
   home.sessionVariables = {
     EDITOR = "nvim";
+    MESA_LOADER_DRIVER_OVERRIDE = "iris";
+    LIBGL_DRIVERS_PATH = "/run/opengl-driver/lib/dri:/run/opengl-driver-32/lib/dri";
   };
 
   home.file = {
