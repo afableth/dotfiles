@@ -18,7 +18,6 @@
     nixd
     localsend
     spotifyd
-    zed-editor
     steam
   ];
 
