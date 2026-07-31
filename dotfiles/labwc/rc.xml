@@ -1,10 +1,11 @@
 <?xml version="1.0" ?>
 <labwc_config>
+
   <keyboard>
     <default />
-    <!-- The W- prefix refers to the Super key -->
-    <keybind key="W-z">
-      <action name="Execute" command="wofi --show drun" />
+    <keybind key="W-space">
+      <action name="ShowMenu" menu="root-menu" />
     </keybind>
   </keyboard>
+
 </labwc_config>

@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<openbox_menu>
+  <menu id="root-menu" label="">
+
+    <separator label="Apps"/>
+
+    <item label="Terminal">
+      <action name="Execute" command="alacritty" />
+    </item>
+    <item label="Firefox">
+      <action name="Execute" command="firefox" />
+    </item>
+
+    <separator label="system"/>
+
+    <item label="Reboot">
+      <action name="Execute" command="reboot" />
+    </item>
+
+  </menu>
+</openbox_menu>

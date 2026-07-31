@@ -79,14 +79,11 @@
         theme = "system";
       };
     };
-    wofi = {
-      enable = true;
-    };
   };
 
   services = {
     mako.enable = true;
-    swayidle.enable = true; # idle management daemon
+    swayidle.enable = true;
     polkit-gnome.enable = true; # polkit
     spotifyd = {
       enable = true;
