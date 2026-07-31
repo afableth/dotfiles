@@ -107,8 +107,8 @@
     ".config/zed/AGENTS.md".source = ./dotfiles/agent/AGENTS.md;
     ".config/zed/settings.json".source = ./dotfiles/zed.jsonc;
     ".config/nvim/init.lua".source = ./dotfiles/nvim/init.lua;
-    ".config/labwc/rc.xml".source = ./dotfiles/labwc/rc.xml;
-    ".config/labwc/autostart".source = ./dotfiles/autostart;
+    ".config/labwc/".source = ./dotfiles/labwc;
+    ".local/share/icons/Bibata-Modern-Classic".source = ./dotfiles/cursor/Bibata-Modern-Classic;
   };
 
   # Let Home Manager install and manage itself.
