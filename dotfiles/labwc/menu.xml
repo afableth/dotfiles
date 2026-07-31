@@ -10,6 +10,9 @@
     <item label="Firefox">
       <action name="Execute" command="firefox" />
     </item>
+    <item label="Steam">
+      <action name="Execute" command="steam" />
+    </item>
 
     <separator label="system"/>
 
