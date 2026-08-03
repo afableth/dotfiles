@@ -11,7 +11,7 @@
   };
 
   outputs =
-    { nixpkgs, home-manager, noctalia, noctalia-greeter, ... }:
+    { nixpkgs, home-manager, ... }:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs { inherit system; };
@@ -19,7 +19,6 @@
     {
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         inherit system;
-        specialArgs = { inherit noctalia-greeter; };
         modules = [
           ./configuration.nix
           ./hardware-configuration.nix
@@ -30,7 +29,6 @@
             home-manager.backupFileExtension = "backup";
             home-manager.users.poske = {
               imports = [
-                noctalia.homeModules.default
                 ./home.nix
               ];
             };
