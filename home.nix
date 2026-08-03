@@ -47,6 +47,11 @@
       settings = {
         user.name = "poske57";
         user.email = "poske+github@ubukha.com";
+        init.defaultBranch = "main";
+        push.autoSetupRemote = true;
+	merge.conflictStyle = "nvim -d";
+	rerere.enabled = true;
+
       };
     };
     firefox = {
