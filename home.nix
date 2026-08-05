@@ -21,6 +21,7 @@
     steam
     wiremix
     bluetui
+    wlay
   ];
 
   programs = {

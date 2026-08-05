@@ -36,6 +36,9 @@
       <item label="Internet">
         <action name="Execute" command="alacritty --command=nmtui" />
       </item>
+      <item label="Display">
+        <action name="Execute" command="wlay" />
+      </item>
     </menu>
 
   </menu>
