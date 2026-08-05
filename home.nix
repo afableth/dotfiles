@@ -19,6 +19,8 @@
     localsend
     spotifyd
     steam
+    wiremix
+    bluetui
   ];
 
   programs = {

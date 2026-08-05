@@ -14,11 +14,29 @@
       <action name="Execute" command="steam" />
     </item>
 
-    <separator label="system"/>
+    <menu id="system-menu" label="System">
+      <item label="Reboot">
+        <action name="Execute" command="reboot" />
+      </item>
+      <item label="Shutdown">
+        <action name="Execute" command="shutdown -h now" />
+      </item>
+      <item label="Logout">
+        <action name="Exit" />
+      </item>
+    </menu>
 
-    <item label="Reboot">
-      <action name="Execute" command="reboot" />
-    </item>
+    <menu id="settings-menu" label="Settings">
+      <item label="Audio">
+        <action name="Execute" command="alacritty --command=wiremix" />
+      </item>
+      <item label="Bluetooth">
+        <action name="Execute" command="alacritty --command=bluetui" />
+      </item>
+      <item label="Internet">
+        <action name="Execute" command="alacritty --command=nmtui" />
+      </item>
+    </menu>
 
   </menu>
 </openbox_menu>
