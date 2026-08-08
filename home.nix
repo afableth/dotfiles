@@ -101,6 +101,8 @@
     };
   };
 
+  xdg.enable = true;
+
   home.sessionVariables = {
     EDITOR = "nvim";
     MESA_LOADER_DRIVER_OVERRIDE = "iris";
