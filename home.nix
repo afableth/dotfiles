@@ -53,7 +53,6 @@
         user.email = "poske+github@ubukha.com";
         init.defaultBranch = "main";
         push.autoSetupRemote = true;
-        merge.conflictStyle = "nvim -d";
         pull.rebase = true;
         rerere.enabled = true;
       };
