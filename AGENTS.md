@@ -1,0 +1,11 @@
+# Conventional Commits
+- コミットメッセージ形式: `type(scope): subject`
+- `type` の例:
+  - feat: 新機能追加
+  - fix: バグ修正
+  - docs: ドキュメントの変更
+  - style: フォーマット変更
+  - refactor: リファクタリング
+  - perf: パフォーマンス改善
+  - test: テスト追加
+  - chore: ビルド変更
