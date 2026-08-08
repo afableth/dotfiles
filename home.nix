@@ -6,7 +6,7 @@
 
   # If you do want to update the value, then make sure to first check the
   # Home Manager release notes.
-  home.stateVersion = "25.11";
+  home.stateVersion = "26.05";
 
   # The home.packages option allows you to install Nix packages.
   home.packages = with pkgs;[
