@@ -43,6 +43,7 @@
         save = 1000000;
         share = true;
         size = 1000000;
+        path = "`\${config.xdg.dataHome}/zsh/history`";
       };
     };
     git = {
