@@ -28,7 +28,7 @@
 
     <menu id="settings-menu" label="Settings">
       <item label="Audio">
-        <action name="Execute" command="alacritty --command=wiremix" />
+        <action name="Execute" command="alacritty --command=pulsemixer" />
       </item>
       <item label="Bluetooth">
         <action name="Execute" command="alacritty --command=bluetui" />

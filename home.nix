@@ -19,7 +19,7 @@
     localsend
     spotifyd
     steam
-    wiremix
+    pulsemixer
     bluetui
     wlay
     wl-gammactl
