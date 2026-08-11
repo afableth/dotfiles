@@ -39,6 +39,9 @@
       <item label="Display">
         <action name="Execute" command="wlay" />
       </item>
+      <item label="Gamma">
+        <action name="Execute" command="wl-gammactl" />
+      </item>
     </menu>
 
   </menu>

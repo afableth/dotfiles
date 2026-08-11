@@ -22,6 +22,7 @@
     wiremix
     bluetui
     wlay
+    wl-gammactl
   ];
 
   programs = {
