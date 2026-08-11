@@ -21,7 +21,7 @@
         inherit system;
         modules = [
           ./configuration.nix
-          ./hardware-configuration.nix
+          /home/poske/nix/hardware-configuration.nix
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;

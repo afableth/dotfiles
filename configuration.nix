@@ -5,11 +5,6 @@
 { _config, pkgs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
-
   zramSwap = {
     enable = true;
     memoryPercent = 300;
