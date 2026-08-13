@@ -14,10 +14,7 @@
     fastfetch
     neovim
     home-manager
-    nil
-    nixd
     localsend
-    spotifyd
     steam
     pulsemixer
     bluetui
@@ -93,13 +90,6 @@
     mako.enable = true;
     swayidle.enable = true;
     polkit-gnome.enable = true; # polkit
-    spotifyd = {
-      enable = true;
-      settings.global = {
-        device_name = "NixOS";
-        bitrate = 150;
-      };
-    };
   };
 
   xdg.enable = true;
@@ -111,8 +101,6 @@
   };
 
   home.file = {
-    ".config/zed/AGENTS.md".source = ./dotfiles/agent/AGENTS.md;
-    ".config/zed/settings.json".source = ./dotfiles/zed.jsonc;
     ".config/nvim/init.lua".source = ./dotfiles/nvim/init.lua;
     ".config/labwc/".source = ./dotfiles/labwc;
     ".local/share/icons/Bibata-Modern-Classic".source = ./dotfiles/cursor/Bibata-Modern-Classic;
