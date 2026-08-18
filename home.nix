@@ -44,6 +44,11 @@
         path = "$XDG_DATA_HOME/zsh/history";
       };
     };
+    direnv = {
+      enable = true;
+      enableZshIntegration = true;
+      nix-direnv.enable = true;
+    };
     git = {
       enable = true;
       settings = {
