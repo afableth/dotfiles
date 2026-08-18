@@ -16,6 +16,16 @@
     enable32Bit = true;
   };
 
+  # NVIDIA PRIME Render Offload (Intel iGPU + NVIDIA dGPU)
+  hardware.nvidia = {
+    modesetting.enable = true;
+    prime.offload.enable = true;
+    prime.intelBusId = "PCI:0:2:0";
+    prime.nvidiaBusId = "PCI:1:0:0";
+    nvidiaPersistenced = true;
+    open = false;
+  };
+
   # Compositor
   programs.labwc.enable = true;
 
@@ -83,6 +93,7 @@
   };
 
   services.xserver.enable = true;
+  services.xserver.videoDrivers = [ "nvidia" ];
   services.xserver.xkb = {
     layout = "us";
     variant = "";
