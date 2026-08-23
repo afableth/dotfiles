@@ -16,7 +16,7 @@
     localsend
     steam
     gamescope
-    pulsemixer
+    pavucontrol
     bluetui
     wlay
     wl-gammactl
