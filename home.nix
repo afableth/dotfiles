@@ -16,6 +16,7 @@
     home-manager
     localsend
     steam
+    gamescope
     pulsemixer
     bluetui
     wlay
