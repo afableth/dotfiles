@@ -2,7 +2,7 @@
 
 {
   home.username = "poske";
-  home.homeDirectory = "/home/poske";
+  home.homeDirectory = "/home/" + config.home.username;
 
   # If you do want to update the value, then make sure to first check the
   # Home Manager release notes.
@@ -10,7 +10,6 @@
 
   # The home.packages option allows you to install Nix packages.
   home.packages = with pkgs;[
-    # TODO check "keifu"
     fastfetch
     neovim
     home-manager
@@ -73,19 +72,13 @@
     };
     alacritty = {
       enable = true;
-      settings = {
-        window = {
-          padding = {
+      settings.window.padding = {
             x = 2;
             y = 2;
-          };
-        };
       };
     };
     opencode = {
       enable = true;
-      settings = {
-      };
       tui = {
         theme = "system";
       };
@@ -95,7 +88,7 @@
   services = {
     mako.enable = true;
     swayidle.enable = true;
-    polkit-gnome.enable = true; # polkit
+    polkit-gnome.enable = true;
   };
 
   xdg.enable = true;
