@@ -128,6 +128,12 @@
     zsh
   ];
 
+  # Containers
+  virtualisation.podman = {
+    enable = true;
+    defaultNetwork.settings.dns_enabled = true;
+  };
+
   # Auto mount media
   services.udisks2 = {
     enable = true;
