@@ -1,0 +1,10 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "permission": {
+    "bash": {
+      "*": "ask",
+      "sudo nixos-rebuild switch --flake /home/poske/nix#nixos --impure": "allow",
+      "sudo nixos-rebuild switch --flake ~/nix#nixos --impure": "allow"
+    }
+  }
+}

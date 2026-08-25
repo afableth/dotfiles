@@ -119,5 +119,17 @@
     mountOnMedia = true;
   };
 
+  security.sudo.extraRules = [
+    {
+      users = [ "poske" ];
+      commands = [
+        {
+          command = "/run/current-system/sw/bin/nixos-rebuild";
+          options = [ "NOPASSWD" ];
+        }
+      ];
+    }
+  ];
+
   system.stateVersion = "26.05"; # DON'T REMOVE THIS!
 }
