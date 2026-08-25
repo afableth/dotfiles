@@ -2,8 +2,6 @@
 <openbox_menu>
   <menu id="root-menu" label="">
 
-    <separator label="Apps"/>
-
     <item label="Terminal">
       <action name="Execute" command="alacritty" />
     </item>
@@ -13,6 +11,8 @@
     <item label="Steam">
       <action name="Execute" command="steam" />
     </item>
+
+    <menu id="applications" label="Apps" execute="labwc-menu-generator --pipemenu" />
 
     <menu id="system-menu" label="System">
       <item label="Reboot">
