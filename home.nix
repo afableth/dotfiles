@@ -20,6 +20,7 @@
     bluetui
     wlay
     wl-gammactl
+    labwc-menu-generator
   ];
 
   programs = {
