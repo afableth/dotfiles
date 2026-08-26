@@ -2,10 +2,25 @@
 <labwc_config>
 
   <keyboard>
+
     <default />
+
     <keybind key="W-space">
       <action name="ShowMenu" menu="root-menu" />
     </keybind>
+
+    <keybind key="XF86MonBrightnessUp" allow-when-locked="true">
+      <action name="Execute">
+        <command>brightnessctl --class=backlight set +5%</command>
+      </action>
+    </keybind>
+
+    <keybind key="XF86MonBrightnessDown" allow-when-locked="true">
+      <action name="Execute">
+        <command>brightnessctl --class=backlight set 5%-</command>
+      </action>
+    </keybind>
+
   </keyboard>
 
 </labwc_config>

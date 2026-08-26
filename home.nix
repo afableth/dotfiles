@@ -21,6 +21,7 @@
     wlay
     wl-gammactl
     labwc-menu-generator
+    brightnessctl
   ];
 
   programs = {
