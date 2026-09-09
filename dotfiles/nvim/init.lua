@@ -14,6 +14,6 @@ vim.opt.smartindent = true
 
 vim.opt.visualbell = true
 
-vim.opt.tabstop = 4
-vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
+
+require("indent")
