@@ -1,5 +1,5 @@
-# Rebuild
-Run `nixos-rebuild switch --flake ~/nix#nixos --impure`
+- This is the repository that makes up NixOS.
+- Conventional Commits
 
-# Conventional Commits
-- コミットメッセージ形式: `type(scope): subject`
+# Rebuild
+テストが完了したら、ユーザーに `comis` を起動して、 `rebuild` を選択してパスワードを入力するように促してください。
