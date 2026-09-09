@@ -16,16 +16,6 @@
     enable32Bit = true;
   };
 
-  # NVIDIA PRIME Render Offload (Intel iGPU + NVIDIA dGPU)
-  hardware.nvidia = {
-    modesetting.enable = true;
-    prime.offload.enable = true;
-    prime.intelBusId = "PCI:0:2:0";
-    prime.nvidiaBusId = "PCI:1:0:0";
-    nvidiaPersistenced = true;
-    open = false;
-  };
-
   # Compositor
   programs.labwc.enable = true;
 
@@ -69,10 +59,6 @@
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
   # Enable networking
   networking.networkmanager.enable = true;
 
@@ -92,13 +78,6 @@
     LC_PAPER = "en_US.UTF-8";
     LC_TELEPHONE = "en_US.UTF-8";
     LC_TIME = "en_US.UTF-8";
-  };
-
-  services.xserver.enable = true;
-  services.xserver.videoDrivers = [ "nvidia" ];
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "";
   };
 
   # Printer
