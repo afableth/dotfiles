@@ -22,6 +22,8 @@
     wl-gammactl
     labwc-menu-generator
     brightnessctl
+    claws-mail
+    obsidian
   ];
 
   programs = {
