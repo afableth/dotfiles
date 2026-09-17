@@ -24,6 +24,7 @@
     brightnessctl
     claws-mail
     obsidian
+    pi-coding-agent
   ];
 
   programs = {

@@ -1,5 +1,5 @@
 {
   "repositoriesPath": "$HOME/nix/",
   "rebuildCommand": "sudo nixos-rebuild switch --flake ~/nix#nixos --impure",
-  "agent": "opencode"
+  "agent": "pi"
 }
