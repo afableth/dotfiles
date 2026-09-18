@@ -58,7 +58,7 @@
       enable = true;
       settings = {
         user.name = "poske57";
-        user.email = "poske+github@ubukha.com";
+        user.email = "poske@afabl.fyi";
         init.defaultBranch = "main";
         push.autoSetupRemote = true;
         pull.rebase = true;
