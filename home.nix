@@ -13,6 +13,7 @@
     fastfetch
     neovim
     home-manager
+    podman-compose
     localsend
     steam
     gamescope
