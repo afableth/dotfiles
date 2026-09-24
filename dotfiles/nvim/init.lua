@@ -17,3 +17,4 @@ vim.opt.visualbell = true
 vim.opt.expandtab = true
 
 require("indent")
+require("cursor")
