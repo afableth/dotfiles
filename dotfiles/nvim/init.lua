@@ -18,3 +18,4 @@ vim.opt.expandtab = true
 
 require("indent")
 require("cursor")
+require("lsp")

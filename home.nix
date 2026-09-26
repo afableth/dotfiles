@@ -26,6 +26,7 @@
     claws-mail
     obsidian
     pi-coding-agent
+    nil
   ];
 
   programs = {
