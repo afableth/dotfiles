@@ -1,3 +1,23 @@
+vim.lsp.config('rust_ls', {
+  cmd = { 'rust-analyzer' },
+  filetypes = { 'rust' },
+  root_markers = {
+    'uv.lock',
+    'pyproject.toml',
+    '.venv',
+    '.git',
+  },
+})
+
+vim.lsp.config('python_ls', {
+  cmd = { 'pyright' },
+  filetypes = { 'python' },
+  root_markers = {
+    'Cargo.toml',
+    '.git',
+  },
+})
+
 vim.lsp.config('lua_ls', {
   cmd = { 'lua-language-server' },
   filetypes = { 'lua' },
