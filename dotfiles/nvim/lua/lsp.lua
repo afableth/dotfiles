@@ -18,7 +18,7 @@ vim.lsp.config('nil_ls', {
 })
 
 vim.lsp.config('solidity_ls', {
-  cmd = { 'vscode-solidity-server', '--stdio' },
+  cmd = { 'solc', '--lsp' },
   filetypes = { 'solidity' },
   root_markers = {
     'foundry.toml',
