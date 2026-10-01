@@ -27,6 +27,7 @@
     obsidian
     pi-coding-agent
     nil
+    jetbrains-mono
   ];
 
   programs = {
@@ -79,9 +80,14 @@
     };
     alacritty = {
       enable = true;
-      settings.window.padding = {
-            x = 2;
-            y = 2;
+      settings = {
+        window.padding = {
+          x = 2;
+          y = 2;
+        };
+        font = {
+          normal.family = "JetBrains Mono";
+        };
       };
     };
     opencode = {
