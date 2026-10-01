@@ -2,18 +2,19 @@ vim.lsp.config('rust_ls', {
   cmd = { 'rust-analyzer' },
   filetypes = { 'rust' },
   root_markers = {
-    'uv.lock',
-    'pyproject.toml',
-    '.venv',
+    'Cargo.toml',
+    'Cargo.lock',
     '.git',
   },
 })
 
 vim.lsp.config('python_ls', {
-  cmd = { 'pyright' },
+  cmd = { 'pyright-langserver', '--stdio' },
   filetypes = { 'python' },
   root_markers = {
-    'Cargo.toml',
+    'uv.lock',
+    'pyproject.toml',
+    '.venv',
     '.git',
   },
 })
@@ -61,5 +62,5 @@ vim.o.completeopt = 'menuone,noselect,fuzzy'
 vim.o.autocomplete = true
 vim.o.autocompletedelay = 200
 
-vim.lsp.enable({ 'lua_ls', 'nil_ls', 'solidity_ls', 'astro_ls' })
+vim.lsp.enable({ 'rust_ls', 'python_ls', 'lua_ls', 'nil_ls', 'solidity_ls', 'astro_ls' })
 
