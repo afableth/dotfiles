@@ -5,6 +5,10 @@
 { _config, pkgs, ... }:
 
 {
+  imports = [
+    /etc/nixos/hardware-configuration.nix
+  ];
+
   zramSwap = {
     enable = true;
     memoryPercent = 300;
