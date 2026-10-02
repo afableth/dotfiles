@@ -58,7 +58,7 @@ vim.lsp.config('astro_ls', {
 })
 
 vim.lsp.completion.enable()
-vim.o.completeopt = 'menuone,noselect,fuzzy'
+vim.o.completeopt = 'menu,menuone,fuzzy'
 vim.o.autocomplete = true
 vim.o.autocompletedelay = 200
 
