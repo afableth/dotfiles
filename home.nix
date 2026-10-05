@@ -1,37 +1,15 @@
 { config, pkgs, ... }:
 
 {
+  # Meta
   home.username = "poske";
   home.homeDirectory = "/home/" + config.home.username;
-
-  # If you do want to update the value, then make sure to first check the
-  # Home Manager release notes.
   home.stateVersion = "26.05";
+  programs.home-manager.enable = true;
 
-  # The home.packages option allows you to install Nix packages.
-  home.packages = with pkgs;[
-    fastfetch
-    neovim
-    home-manager
-    podman-compose
-    localsend
-    steam
-    gamescope
-    pavucontrol
-    bluetui
-    wlay
-    wl-gammactl
-    labwc-menu-generator
-    brightnessctl
-    claws-mail
-    obsidian
-    pi-coding-agent
-    nil
-    jetbrains-mono
-    bitwarden-desktop
-  ];
-
+  # Coding
   programs = {
+    neovim.enable = true;
     zsh = {
       enable = true;
       autocd = true;
@@ -50,7 +28,7 @@
         save = 1000000;
         share = true;
         size = 1000000;
-        path = "$XDG_DATA_HOME/zsh/history";
+        path = "${config.xdg.dataHome}/zsh/history";
       };
     };
     direnv = {
@@ -70,17 +48,8 @@
         # commit signing
         commit.gpgsign = true;
         gpg.format = "ssh";
-        user.signingkey = "key::ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPnJtuVDN563Leul7aThmEEMaMp3cFU+B0ijPGyn0lf+";
-      };
-    };
-    firefox = {
-      enable = true;
-      languagePacks = [ "en-US" "ja-JP" ];
-      configPath = "${config.xdg.configHome}/mozilla/firefox";
-      profiles.default.search = {
-        force = true;
-        default = "ddg";
-        privateDefault  = "ddg";
+        user.signingkey
+        = "key::ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPnJtuVDN563Leul7aThmEEMaMp3cFU+B0ijPGyn0lf+";
       };
     };
     alacritty = {
@@ -91,22 +60,55 @@
           y = 2;
         };
         font = {
-          normal.family = "JetBrains Mono";
+          normal.family = "JetBrainsMono Nerd Font Mono";
         };
       };
     };
-    opencode = {
+  };
+  home.file.".config/nvim".source = ./dotfiles/nvim;
+
+  # Office
+  programs = {
+    obsidian.enable = true;
+    firefox = {
       enable = true;
-      tui = {
-        theme = "system";
+      languagePacks = [ "en-US" "ja-JP" ];
+      configPath = "${config.xdg.configHome}/mozilla/firefox";
+      profiles.default.search = {
+        force = true;
+        default = "ddg";
+        privateDefault  = "ddg";
       };
     };
   };
+
+  # The home.packages option allows you to install Nix packages.
+  home.packages = with pkgs;[
+    localsend
+    bitwarden-desktop
+    nerd-fonts.jetbrains-mono
+    pi-coding-agent
+    podman-compose
+    # Game
+    steam
+    gamescope
+    # Setting UI
+    pavucontrol
+    bluetui
+    wlay
+    wl-gammactl
+    labwc-menu-generator
+    brightnessctl
+    fastfetch
+  ];
 
   services = {
     mako.enable = true;
     swayidle.enable = true;
     polkit-gnome.enable = true;
+    udiskie = {
+      enable = true;
+    };
   };
 
   gtk = {
@@ -127,12 +129,8 @@
   };
 
   home.file = {
-    ".config/nvim".source = ./dotfiles/nvim;
     ".config/labwc/".source = ./dotfiles/labwc;
     ".config/comis/settings.json".source = ./dotfiles/comis.json;
     ".local/share/icons/Bibata-Modern-Classic".source = ./dotfiles/cursor/Bibata-Modern-Classic;
   };
-
-  # Let Home Manager install and manage itself.
-  programs.home-manager.enable = true;
 }

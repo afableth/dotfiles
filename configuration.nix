@@ -107,7 +107,6 @@
     pulse.enable = true;
   };
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
   users.defaultUserShell = pkgs.zsh;
   programs.zsh.enable = true;
 
@@ -117,22 +116,13 @@
     extraGroups = [ "networkmanager" "wheel" ];
   };
 
-  environment.systemPackages = with pkgs; [
-    zsh
-  ];
-
-  # Containers
+  # Podman
   virtualisation.podman = {
     enable = true;
     defaultNetwork.settings.dns_enabled = true;
   };
 
-  # Auto mount media
-  services.udisks2 = {
-    enable = true;
-    mountOnMedia = true;
-  };
-
+  # Rebuild without password
   security.sudo.extraRules = [
     {
       users = [ "poske" ];
