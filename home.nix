@@ -110,6 +110,12 @@
     polkit-gnome.enable = true;
     udiskie = {
       enable = true;
+      tray = "always";
+      settings = {
+        program_options = {
+          mount_dir = "${config.xdg.dataHome}/mnt";
+        };
+      };
     };
   };
 

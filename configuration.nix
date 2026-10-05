@@ -94,6 +94,9 @@
     LC_TIME = "en_US.UTF-8";
   };
 
+  # UDisks2 (required by udiskie)
+  services.udisks2.enable = true;
+
   # Printer
   services.printing.enable = true;
 
