@@ -145,6 +145,6 @@
   home.file = {
     ".config/labwc/".source = ./dotfiles/labwc;
     ".config/comis/settings.json".source = ./dotfiles/comis.json;
-    ".config/waybar/config.jsonc".source = ./dotfiles/waybar.jsonc;
+    ".config/waybar/".source = ./dotfiles/waybar;
   };
 }
