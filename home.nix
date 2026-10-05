@@ -28,6 +28,7 @@
     pi-coding-agent
     nil
     jetbrains-mono
+    bitwarden-desktop
   ];
 
   programs = {
@@ -69,7 +70,7 @@
         # commit signing
         commit.gpgsign = true;
         gpg.format = "ssh";
-        user.signingkey = "~/.ssh/id_ed25519.pub";
+        user.signingkey = "key::ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPnJtuVDN563Leul7aThmEEMaMp3cFU+B0ijPGyn0lf+";
       };
     };
     firefox = {
@@ -122,6 +123,7 @@
     EDITOR = "nvim";
     MESA_LOADER_DRIVER_OVERRIDE = "iris";
     LIBGL_DRIVERS_PATH = "/run/opengl-driver/lib/dri:/run/opengl-driver-32/lib/dri";
+    SSH_AUTH_SOCK = "${config.home.homeDirectory}/.bitwarden-ssh-agent.sock";
   };
 
   home.file = {
