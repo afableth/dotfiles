@@ -60,12 +60,16 @@
     git = {
       enable = true;
       settings = {
-        user.name = "poske57";
-        user.email = "poske@afabl.fyi";
+        user.name = "afabl";
+        user.email = "hello@afabl.fyi";
         init.defaultBranch = "main";
         push.autoSetupRemote = true;
         pull.rebase = true;
         rerere.enabled = true;
+        # commit signing
+        commit.gpgsign = true;
+        gpg.format = "ssh";
+        user.signingkey = "~/.ssh/id_ed25519.pub";
       };
     };
     firefox = {
