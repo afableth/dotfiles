@@ -138,8 +138,13 @@
     SSH_AUTH_SOCK = "${config.home.homeDirectory}/.bitwarden-ssh-agent.sock";
   };
 
+  programs.waybar = {
+    enable = true;
+  };
+
   home.file = {
     ".config/labwc/".source = ./dotfiles/labwc;
     ".config/comis/settings.json".source = ./dotfiles/comis.json;
+    ".config/waybar/config.jsonc".source = ./dotfiles/waybar.jsonc;
   };
 }
