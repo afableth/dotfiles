@@ -141,6 +141,5 @@
   home.file = {
     ".config/labwc/".source = ./dotfiles/labwc;
     ".config/comis/settings.json".source = ./dotfiles/comis.json;
-    ".local/share/icons/Bibata-Modern-Classic".source = ./dotfiles/cursor/Bibata-Modern-Classic;
   };
 }
