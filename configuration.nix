@@ -119,6 +119,9 @@
     extraGroups = [ "networkmanager" "wheel" ];
   };
 
+  # Tailscale
+  services.tailscale.enable = true;
+
   # Podman
   virtualisation.podman = {
     enable = true;
