@@ -89,6 +89,7 @@
     nerd-fonts.jetbrains-mono
     pi-coding-agent
     podman-compose
+    runc
     # Game
     steam
     gamescope
